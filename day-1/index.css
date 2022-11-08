@@ -1,0 +1,37 @@
+#head{
+    width: 100%;
+    display: flex;
+    border: 3px solid black;
+}
+#head>div{
+    display: flex;
+    align-items: center;
+}
+#head>div>:nth-child(9){
+    color: red;
+}
+#head>div>img {
+    width: 300px;
+}
+#head>div>a{
+    font-size: 25px;
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+}
+#head>div+div{
+    width: 30%;
+    justify-content:end;
+}
+#head>div+div>img{
+    width: 25px;
+    margin: 20px;
+
+}
+#head>div+div>input{
+    font-size: 25px;    
+    border: 4px solid black;
+}
+#head>div>:nth-child(2){
+    text-decoration: underline red;
+}
