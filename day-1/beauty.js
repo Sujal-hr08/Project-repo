@@ -1,59 +1,44 @@
-// fetch('https://jsonplaceholder.typicode.com/todos/1')
-//   .then(response => response.json())
-//   .then(json => console.log(json))
+let arr = ["https://modesens.com/banner/13927/getimg/?img=%2Fbanner%2F20221107-modesens-Double11-1140x400-EN_1667706245.jpg",
+    "https://modesens.com/banner/13917/getimg/?img=%2Fbanner%2F20221107-modesens-Italist-1140x400-F-EN.jpg",
+    "https://modesens.com/banner/13985/getimg/?img=%2Fbanner%2F20221108-modesens-FurTrim-1140x400-F_1667875747.jpg",
+    "https://modesens.com/banner/13975/getimg/?img=%2Fbanner%2F20221107-modesens-lululemon-1140x400-F_1667788631.jpg",
 
+];
 
-function heading() {
-  let head = document.getElementById("heading");
-  let h1 = document.createElement("h2");
-  let p = document.createElement("p");
-  h1.innerText = "Designer Beauty"
-  p.innerText = "Shop designer beauty with price comparison across 500+ stores in one place. Discover the latest designer beauty at ModeSens."
-  head.append(h1, p);
+function carousel() {
+    let silde = document.getElementById("slide");
+    let i = 0;
+    let image = document.createElement("img");
+    if (i == 0) {
+        image.src = arr[0];
+        silde.append(image)
+    }
+
+    setInterval(function () {
+        if (i == 0) {
+            image.src = arr[i];
+            silde.append(image)
+        }
+        if (i == 1) {
+            image.src = arr[i];
+            silde.append(image)
+        }
+        if (i == 2) {
+            image.src = arr[i];
+            silde.append(image)
+        }
+        if (i == 3) {
+            image.src = arr[i];
+            silde.append(image)
+        }
+        image.src = arr[i];
+        silde.append(image);
+        i++;
+        console.log(i);
+        if (i == 4) {
+            i = 0;
+        }
+    }, 5000)
+
 }
-
-heading();
-
-const getData=async()=>{
-try{
-  let res=await fetch ("http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=eyeliner");
-  let data= await res.json();
-  console.log(data)
-  Products(data)
-
-}catch(err){
-  console.log(err)
-}
-}
-
-getData()
-
-function Products(data){
-  let maindiv=document.createElement("div");
-  data.forEach(function (ele){    
-    
-  let div=document.createElement("div");
-  let name=document.createElement("h2");
-    name.innerText=ele.name;
-  let image=document.createElement("img");
-  image.src=ele.image_link;
-  let prodDesc=document.createElement("p");
-  prodDesc.innerText=ele.category
-  let price=document.createElement("h3");
-  price.innerText=ele.price;
-  let btn=document.createElement("button");
-  btn.innerText="Add to cart"
-  btn.addEventListener(function(){
-    localStorage.setItem("name",JSON.stringify(name));
-    localStorage.setItem("name",JSON.stringify(image));
-    localStorage.setItem("name",JSON.stringify(prodDesc));
-    localStorage.setItem("name",JSON.stringify(price));
-  })
-  div.append(image,name,prodDesc,price,btn)
-  maindiv.append(div)
-  document.querySelector("#product").append(maindiv) 
-
-  });
-  
-  
-}
+// carousel();
