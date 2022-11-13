@@ -3,7 +3,6 @@
     display: flex;
     border: 3px solid black;
     position: sticky;
-    justify-content: space-between;
 }
 
 #head>div {
@@ -11,12 +10,16 @@
     align-items: center;
 }
 
+#head>div>:nth-child(9) {
+    color: red;
+}
+
 #head>div>img {
-    width: 190px;
+    width: 300px;
 }
 
 #head>div>a {
-    font-size: 12px;
+    font-size: 25px;
     margin: 10px;
     color: black;
     text-decoration: none;
@@ -28,16 +31,79 @@
 }
 
 #head>div+div>img {
-    width: 13px;
-    margin: 13px;
+    width: 25px;
+    margin: 20px;
 
 }
 
-#heading {
-    width: 70%;
+#head>div+div>input {
+    font-size: 25px;
+    border: 4px solid black;
+}
+
+#head>div>:nth-child(2) {
+    text-decoration: underline red;
+}
+
+#slide {
+    display: flex;
+    justify-content: center;
+}
+
+#slide>img {
+    width: 90%;
+}
+
+#brandName {
+    width: 90%;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
-#heading>h2 {
-    font-weight: 500;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+#brandName>h1 {
+    font-size: 50px;
+    margin: 5px;
+}
+
+#brandName>h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#brandName>div {
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 40px;
+}
+
+#brandName>div>img {
+    width: 250px;
+}
+
+#offer {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#offer>div>img {
+    width: 200px;
+}
+
+#communitypost{
+    width: 90%;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+#communitypost:nth-child(1)>h1{
+    text-align: center;
+}
+#communitypost>:nth-child(1){
+    
 }

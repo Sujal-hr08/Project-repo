@@ -3,7 +3,6 @@
     display: flex;
     border: 3px solid black;
     position: sticky;
-    justify-content: space-between;
 }
 
 #head>div {
@@ -11,12 +10,16 @@
     align-items: center;
 }
 
+#head>div>:nth-child(9) {
+    color: red;
+}
+
 #head>div>img {
-    width: 190px;
+    width: 300px;
 }
 
 #head>div>a {
-    font-size: 12px;
+    font-size: 25px;
     margin: 10px;
     color: black;
     text-decoration: none;
@@ -28,9 +31,18 @@
 }
 
 #head>div+div>img {
-    width: 13px;
-    margin: 13px;
+    width: 25px;
+    margin: 20px;
 
+}
+
+#head>div+div>input {
+    font-size: 25px;
+    border: 4px solid black;
+}
+
+#head>div>:nth-child(2) {
+    text-decoration: underline red;
 }
 
 #slide {
@@ -43,10 +55,8 @@
 }
 
 #brandName {
-    width: 80%;
+    width: 90%;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,23 +64,25 @@
     text-align: center;
 }
 
-#brandName>p {
-    margin-top: 0;
-    font-size: 25px;
-    color: gray;
+#brandName>h1 {
+    font-size: 50px;
+    margin: 5px;
+}
+
+#brandName>h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 #brandName>div {
-    width: 100%;
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(5, 250px);
     grid-template-rows: repeat(2, 150px);
-
+    gap: 40px;
 }
 
 #brandName>div>img {
-    width: 160px;
+    width: 250px;
 }
 
 #offer {
@@ -79,207 +91,19 @@
     text-align: center;
 }
 
-#offer>div {
-    display: flex;
-    justify-content: space-evenly;
+#offer>div>img {
+    width: 200px;
 }
 
-#offer>div>div {
-    width: 320px;
-    margin: auto;
-}
-
-#offer>div>div>img {
-    width: 300px;
-    height: 400px;
-}
-
-#offer>div>div>button {
-    font-size: 15px;
-    padding: 10px;
-    background-color: white;
-    margin-bottom: 60px;
-}
-
-#trendingNow {
+#communitypost{
     width: 90%;
     margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+#communitypost:nth-child(1)>h1{
     text-align: center;
 }
-
-#trendingNow>:nth-child(2) {
-    display: flex;
-    justify-content: space-between;
-}
-
-#trendingNow>:nth-child(2)>div {
-    padding: 10px;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-#trendingNow>:nth-child(2)>div>img {
-    width: 200px;
-    height: 240px;
-}
-
-#trendingNow>:nth-child(2)>div>p+h3 {
-    color: red;
-}
-
-#trendingNow>:nth-child(2)>div>p {
-    color: gray;
-    font-weight: bold;
-}
-
-#trendingNow>:nth-child(3)>button {
-    margin-top: 30px;
-    font-size: 15px;
-    padding: 10px;
-    background-color: white;
-}
-
-#communitypost {
-    width: 90%;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 70px;
-}
-
-#communitypost>:nth-child(1) {
-    display: flex;
-    justify-content: center;
-}
-
-#communitypost>:nth-child(2) {
-    display: flex;
-}
-
-#communitypost>:nth-child(2)>div {
-    width: 260px;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    display: flex;
-    justify-content: center;
-}
-
-#communitypost>:nth-child(2)>div>img {
-    width: 200px;
-    height: 300px;
-}
-
-#communitypost>:nth-child(3) {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-#communitypost>:nth-child(3)>button {
-    width: 100px;
-    padding: 10px;
-    font-size: 15px;
-    background-color: white;
-}
-
-#app {
-    margin: auto;
-    margin-bottom: 50px;
-    background-color: rgb(231, 231, 231);
-    display: flex;
-    padding: 20px;
-    justify-content: space-evenly;
-}
-
-#phoneapp {
-    width: 20%;
-    text-align: center;
-}
-
-#phoneapp>h2,
-#desktopapp>h2{
-    font-weight: 600;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-}
-
-#phoneapp>p,
-#desktopapp>p {
-    font-size: 15px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: gray;
-}
-
-#phoneapp>button,
-#desktopapp>button {
-    background-color: black;
-    color: white;
-    font-size: 15px;
-    padding: 13px;
-    font-weight: bold;
-    margin-bottom: 40px;
-}
-
-#phoneapp>img {
-    width: 200px;
-}
-
-#desktopapp {
-    width: 25%;
-    text-align: center;
-}
-
-#desktopapp>img {
-    width: 400px;
-    display: block;
-}
-
-#bottom {
-    width: 100%;
-    margin: auto;
-}
-
-#bottom>div {
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    grid-template-rows: repeat(1, 200px);
-    gap: 10px;
-}
-#bottom>div>div>a {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    color: gray;
-    text-decoration: none;
-}
-
-#bottom>div>div>input {
-    font-size: 15px;
-}
-
-#bottom>p {
-    color: gray;
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-#end {
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-}
-
-#end>div {
-    width: 50%;
-    display: flex;
-    align-items: center;
-}
-
-#end>div>img {
-    width: 40px;
-    margin: 5px;
-}
-
-#end>div+div {
-    justify-content: end;
+#communitypost>:nth-child(1){
+    
 }
